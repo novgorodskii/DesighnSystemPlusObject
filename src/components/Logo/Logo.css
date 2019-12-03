@@ -1,6 +1,9 @@
 .logo {
-  width: 100px;
+  width: 160px;
+  height: 64px;
 }
 .logo img {
-  max-width: 100%;
+  display: block;
+  margin: auto;
+  max-width: 115px;
 }
