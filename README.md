@@ -1,2 +1,0 @@
-# DesighnSystemPlusObject
-Created with CodeSandbox
