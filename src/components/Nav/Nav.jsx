@@ -1,11 +1,13 @@
 import React from "react";
 
+import Logo from '../Logo';
 import NavList from '../NavList';
-import "./Nav.css";
+import "./Nav.sass";
 
 const Nav = () => {
   return (
     <div className="nav">
+      <Logo />
       <NavList />
     </div>
   );

@@ -1,8 +1,10 @@
 import React from 'react';
 
+import './NavList.sass';
+
 const NavList = () => {
   return (
-    <div>NavList</div>
+    <div className="nav-list">NavList</div>
   );
 };
 
