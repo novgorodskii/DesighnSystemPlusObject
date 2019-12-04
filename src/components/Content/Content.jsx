@@ -16,10 +16,9 @@ const Content = () => {
     <div className="content">
       {
         data.map(item => {
-          return {
+          return (
             <h1>{item.name}</h1>
-            // {getItems(item.arr)}
-          }
+          )
         })}
     </div>
   );
