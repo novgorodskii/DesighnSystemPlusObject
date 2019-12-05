@@ -6,7 +6,7 @@ import data from '../../data';
 const NavListItem = ({name, arr}) => {
   return (
     <div className="nav-list-item">
-      <div className="nav-list-title">{name}</div>
+      <div className="nav-list-item-title">{name}</div>
       {
         arr.map(item => {
           return (

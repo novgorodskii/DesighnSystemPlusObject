@@ -2,6 +2,7 @@ body {
   background: #fff;
   padding: 0;
   margin: 0;
+  font-size: 15px;
 }
 a {
   color:#151515;
@@ -9,4 +10,20 @@ a {
 }
 a:hover {
   color: #0066FF;
+}
+h1 {
+  font-size: 34px;
+  font-family: "Proba Pro Bold" ,sans-serif
+}
+h2 {
+  font-size: 34px;
+  font-family: "Proba Pro SemiBold" ,sans-serif
+}
+h3 {
+  font-size: 34px;
+  font-family: "Proba Pro SemiBold" ,sans-serif
+}
+h4 {
+  font-size: 34px;
+  font-family: "Proba Pro Medium" ,sans-serif
 }
