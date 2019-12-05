@@ -58,7 +58,6 @@ const Typography = () => {
         <Phagraph text="+Object is a Company that works with glass." mode="bodySmall" />
       </Frame>
       <Code text='<Heading text="+Object is a Company that works with glass." level={1} />' />
-
     </div>
   );
 };
