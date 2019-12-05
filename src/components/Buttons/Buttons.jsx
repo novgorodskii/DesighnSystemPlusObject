@@ -4,6 +4,7 @@ import TitleUi from '../TitleUi';
 import Phagraph from '../Typography/Phagraph';
 import Frame from '../Frame';
 import Button from './Button';
+import Link from './Link';
 import Code from '../Code';
 
 
@@ -15,7 +16,7 @@ import './Buttons.sass';
 const Buttons = () => {
   return(
     <div className="buttons">
-      <TitleUi path="src/components/Typography/Buttons/Button.js" name="Button" />
+      <TitleUi path="src/components/Buttons/Button/Button.js" name="Button" />
 
       <Phagraph text="Button:" mode="body" />
       <Frame>
@@ -62,6 +63,27 @@ const Buttons = () => {
           onClick={() => console.log("Button Loading")}/>
       </Frame>
       <Code text='<Button onClick={() => console.log("Button Icon")}><NearMeIcon /></Button>' />
+
+
+      <TitleUi path="src/components/Buttons/Link/Link.js" name="Link" />
+
+      <Phagraph text="Simple link:" mode="body" />
+      <Frame>
+        <Link><span>Ссылка</span></Link>
+      </Frame>
+      <Code text='<Link onClick={() => console.log("Button Icon")}><NearMeIcon /></Button>' />
+
+      <Phagraph text="Bold link:" mode="body" />
+      <Frame>
+        <Link mode="bold"><span>Ссылка</span></Link>
+      </Frame>
+      <Code text='<Link onClick={() => console.log("Button Icon")}><NearMeIcon /></Button>' />
+
+      <Phagraph text="Link external:" mode="body" />
+      <Frame>
+        <Link mode="external"><span>Ссылка</span></Link>
+      </Frame>
+      <Code text='<Link onClick={() => console.log("Button Icon")}><NearMeIcon /></Button>' />
     </div>
   );
 };

@@ -5,8 +5,9 @@ body {
   font-size: 15px;
 }
 a {
-  color:#151515;
+  color:#0047B3;
   text-decoration: none;
+  font-size: 17px;
 }
 a:hover {
   color: #0066FF;

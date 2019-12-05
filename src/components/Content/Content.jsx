@@ -3,6 +3,7 @@ import React from 'react';
 import ContentItem from '../ContenItem';
 import Typography from '../Typography';
 import Buttons from '../Buttons';
+import Forms from '../Forms';
 
 import './Content.sass';
 
@@ -15,6 +16,10 @@ const Content = () => {
       </ContentItem>
       <ContentItem name="Кнопки и ссылки">
         <Buttons />
+      </ContentItem>
+
+      <ContentItem name="Формы">
+        <Forms />
       </ContentItem>
     </div>
   );
