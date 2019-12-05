@@ -2,11 +2,11 @@ import React from 'react';
 
 import Heading from '../Typography/Heading';
 
-const ContentItem = ({name, component}) => {
+const ContentItem = (props) => {
   return (
     <React.Fragment>
-      <Heading text={name} level={1} />
-      {component}
+      <Heading text={props.name} level={1} />
+      {props.children}
     </React.Fragment>
   );
 };

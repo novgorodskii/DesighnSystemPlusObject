@@ -9,7 +9,9 @@ const Content = () => {
   return (
     <div className="content">
       <div className="name-project" >UI Kit +Object</div>
-      <ContentItem component={Typography} name="Типографика" />
+      <ContentItem name="Типографика">
+        <Typography />
+      </ContentItem>
     </div>
   );
 };
