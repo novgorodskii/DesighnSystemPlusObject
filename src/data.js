@@ -19,11 +19,11 @@ const data = [
     items: [
       {
         name: "Button",
-        id: 3,
+        id: 1,
       },
       {
         name: "Link",
-        id: 4,
+        id: 2,
       }
     ]
   },
@@ -33,15 +33,15 @@ const data = [
     items: [
       {
         name: "Checkbox",
-        id: 5,
+        id: 1,
       },
       {
         name: "CheckboxGroup",
-        id: 6,
+        id: 2,
       },
       {
         name: "Input",
-        id: 7,
+        id: 3,
       }
     ]
   },
@@ -51,7 +51,7 @@ const data = [
     items: [
       {
         name: "Card",
-        id: 8,
+        id: 1,
       },
     ]
   },
