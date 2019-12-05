@@ -10,7 +10,7 @@ const Code = ({text}) => {
       <br />
       <code>{text}</code>
     </div>
-  )
+  );
 };
 
 export default Code;
