@@ -1,11 +1,11 @@
 import React from 'react';
 
-import TitleUi from '../TitleUi';
+import Heading from '../Typography/Heading';
 
 const ContentItem = ({name, component}) => {
   return (
     <React.Fragment>
-      <TitleUi name={name} />
+      <Heading text={name} level={1} />
       {component}
     </React.Fragment>
   );

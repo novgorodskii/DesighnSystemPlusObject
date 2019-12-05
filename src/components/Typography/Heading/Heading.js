@@ -17,3 +17,5 @@ const Heading = ({level, text}) => {
   };
   return <div>{renderSwitch(level,text)}</div>
 };
+
+export default Heading;
