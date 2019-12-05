@@ -4,6 +4,7 @@ import Nav from "../Nav";
 import Content from '../Content';
 
 import "./App.css";
+import "../../fonts/fonts.css";
 
 const App = () => {
   return (
