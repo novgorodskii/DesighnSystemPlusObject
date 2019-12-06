@@ -5,7 +5,7 @@ const TitleUi = ({name, path}) => {
   return (
     <div className="typography-title">
       <div>{name}</div>
-      <p className="shadow-box">{path}</p>
+      <p className="shadow-box">Path: {path}</p>
     </div>
   )
 };
