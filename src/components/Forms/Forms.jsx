@@ -34,7 +34,6 @@ const Forms = () => {
   const [activeItemSelect, setSelect] = useState(dataSelect[0]);
   const [activeItemSelectIcon, setSelectIcon] = useState(dataSelect[0]);
   const [activesMultiSelect, setMultiSelect] = useState([]);
-  const [activesMultiSelectSearch, setMultiSelectSeach] = useState([]);
 
   const addTag = (id) => {
     const index = activesMultiSelect.findIndex(tag => tag.id === id);
@@ -115,22 +114,6 @@ const Forms = () => {
           itemsList={dataSelect}
           activeItem={activesMultiSelect} />
       </NewComponent>
-
-      <NewComponent
-        id={newId++}
-        textPhagraph="Multi Select Search:"
-        mpdePhagraph="body"
-        textCode='<MultiSelect
-        onClick={(id) => addTag(id)}
-        itemsList={dataSelect}
-        activeItem={activesMultiSelect}/>'>
-        <MultiSelect
-          deleteTag={deleteTag}
-          addTag={addTag}
-          itemsList={dataSelect}
-          activeItem={activesMultiSelect} />
-      </NewComponent>
-
     </div>
   );
 };

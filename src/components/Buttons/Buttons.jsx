@@ -6,7 +6,7 @@ import Frame from '../Frame';
 import Button from './Button';
 import Link from './Link';
 import Code from '../Code';
-
+import NewComponent from '../NewComponent';
 
 import Check from '@material-ui/icons/Check';
 import NearMeIcon from '@material-ui/icons/NearMe';
@@ -18,51 +18,67 @@ const Buttons = () => {
     <div className="buttons">
       <TitleUi path="src/components/Buttons/Button/Button.js" name="Button" />
 
-      <Phagraph text="Button:" mode="body" />
-      <Frame>
-        <Button text="button" onClick={() => console.log("Button")} />
-      </Frame>
-      <Code text='<Button text="button" nClick={() => console.log("Button") />' />
+      <NewComponent
+        textPhagraph="Button:"
+        mpdePhagraph="body"
+        textCode='<Button text="button" onClick={() => console.log("Button")} />'>
+      </NewComponent>
 
-      <Phagraph text="Button Left Icon:" mode="body" />
-      <Frame>
-        <Button
+      <NewComponent
+        textPhagraph="Button Left Icon:"
+        mpdePhagraph="body"
+        textCode='<Button
+        mode="left-icon"
+        text="left icon"
+        onClick={() => console.log("Button Icon")}>
+        <Check />
+      </Button>'>
+          <Button
           mode="left-icon"
           text="left icon"
           onClick={() => console.log("Button Icon")}>
           <Check />
         </Button>
-      </Frame>
-      <Code text='<Button text="left icon" onClick={() => console.log("Button Icon")}><AccessAlarmIcon /></Button>' />
+      </NewComponent>
 
-      <Phagraph text="Button small:" mode="body" />
-      <Frame>
-        <Button
-          mode="small"
-          text="small default"
-          onClick={() => console.log("Button Icon")} />
-      </Frame>
-      <Code text='<Button mode="small"
-        text="small default" onClick={() => console.log("Button")}><AccessAlarmIcon /></Button>' />
+      <NewComponent
+        textPhagraph="Button small:"
+        mpdePhagraph="body"
+        textCode='<Button
+        mode="small"
+        text="small default"
+        onClick={() => console.log("Button Icon")} />'>
+          <Button
+            mode="small"
+            text="small default"
+            onClick={() => console.log("Button Icon")} />
+      </NewComponent>
 
-      <Phagraph text="Button Icon:" mode="body" />
-      <Frame>
+      <NewComponent
+        textPhagraph="Button Icon:"
+        mpdePhagraph="body"
+        textCode='<Button
+        mode="icon"
+        onClick={() => console.log("Button Icon")}>
+        <NearMeIcon />
+      </Button>'>
         <Button
           mode="icon"
           onClick={() => console.log("Button Icon")}>
           <NearMeIcon />
         </Button>
-      </Frame>
-      <Code text='<Button onClick={() => console.log("Button Icon")}><NearMeIcon /></Button>' />
+      </NewComponent>
 
-      <Phagraph text="Button loading:" mode="body" />
-      <Frame>
+      <NewComponent
+        textPhagraph="Button Loading:"
+        mpdePhagraph="body"
+        textCode='<Button mode="loader" loader
+        onClick={() => console.log("Button Loading")}/>'>
         <Button
           mode="loader"
           loader
           onClick={() => console.log("Button Loading")}/>
-      </Frame>
-      <Code text='<Button onClick={() => console.log("Button Icon")}><NearMeIcon /></Button>' />
+      </NewComponent>
 
 
       <TitleUi path="src/components/Buttons/Link/Link.js" name="Link" />
