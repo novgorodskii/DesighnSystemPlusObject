@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
 
 import TitleUi from '../TitleUi';
-import Code from '../Code';
-import Frame from '../Frame';
-import Phagraph from '../Typography/Phagraph';
 import Input from './Input';
 import Select from './Select';
-
+import MultiSelect from './MultiSelect';
+import NewComponent from '../NewComponent';
 
 const dataSelect = [
   {
@@ -32,50 +30,107 @@ const dataSelect = [
 ];
 
 const Forms = () => {
-
+  let newId = 0;
   const [activeItemSelect, setSelect] = useState(dataSelect[0]);
   const [activeItemSelectIcon, setSelectIcon] = useState(dataSelect[0]);
+  const [activesMultiSelect, setMultiSelect] = useState([]);
+  const [activesMultiSelectSearch, setMultiSelectSeach] = useState([]);
+
+  const addTag = (id) => {
+    const index = activesMultiSelect.findIndex(tag => tag.id === id);
+    console.log(id)
+    if ( index === -1) {
+      console.log(id)
+      setMultiSelect([...activesMultiSelect, dataSelect[id]]);
+    };
+  };
+
+  const deleteTag = (id) => {
+    const index = activesMultiSelect.findIndex(todo => todo.id === id);
+    setMultiSelect([...activesMultiSelect.slice(0, index),...activesMultiSelect.slice(index + 1)]);
+};
 
   return (
     <div className="forms">
       <TitleUi path="src/components/Forms/Input/Input.js" name="Input"/>
 
-      <Phagraph text="Default input:" mode="body" />
-      <Frame>
+      <NewComponent
+        textPhagraph="Default input:"
+        mpdePhagraph="body"
+        textCode='<Input placeholder="Placeholder" />'>
         <Input placeholder="Placeholder" />
-      </Frame>
-      <Code text='<Input placeholder="Placeholder" />' />
+      </NewComponent>
 
-      <Phagraph text="Default input icon left:" mode="body" />
-      <Frame>
+      <NewComponent
+        textPhagraph="Default input icon left:"
+        mpdePhagraph="body"
+        textCode='<Input placeholder="Placeholder" type="icon" />'>
         <Input placeholder="Placeholder" type="icon" />
-      </Frame>
-      <Code text='<Input placeholder="Placeholder" type="icon" />' />
+      </NewComponent>
 
-      <Phagraph text="Default password:" mode="body" />
-      <Frame>
+      <NewComponent
+        textPhagraph="Default password:"
+        mpdePhagraph="body"
+        textCode='<Input placeholder="Placeholder" type="password" />'>
         <Input placeholder="Placeholder" type="password" />
-      </Frame>
-      <Code text='<Input placeholder="Placeholder" type="password" />' />
-
+      </NewComponent>
 
       <TitleUi path="src/components/Forms/Select/Select.js" name="Dropdown"/>
 
-      <Phagraph text="Default Dropdown:" mode="body" />
-      <Frame>
+      <NewComponent
+        id={newId++}
+        textPhagraph="Default Dropdown:"
+        mpdePhagraph="body"
+        textCode='<Select onClick={(id) => setSelect(dataSelect[id])} itemsList={dataSelect} activeItem={activeItemSelect} />'>
         <Select onClick={(id) => setSelect(dataSelect[id])} itemsList={dataSelect} activeItem={activeItemSelect} />
-      </Frame>
-      <Code text='<Input placeholder="Placeholder" />' />
+      </NewComponent>
 
-      <Phagraph text="Icon Left Dropdown:" mode="body" />
-      <Frame>
+      <NewComponent
+        id={newId++}
+        textPhagraph="Icon Left Dropdown:"
+        mpdePhagraph="body"
+        textCode='<Select
+        iconLeft
+        onClick={(id) => setSelectIcon(dataSelect[id])}
+        itemsList={dataSelect}
+        activeItem={activeItemSelectIcon} />'>
         <Select
           iconLeft
           onClick={(id) => setSelectIcon(dataSelect[id])}
           itemsList={dataSelect}
           activeItem={activeItemSelectIcon} />
-      </Frame>
-      <Code text='<Input placeholder="Placeholder" />' />
+      </NewComponent>
+
+      <NewComponent
+        id={newId++}
+        textPhagraph="Multi Select:"
+        mpdePhagraph="body"
+        textCode='<MultiSelect
+        onClick={(id) => addTag(id)}
+        itemsList={dataSelect}
+        activeItem={activesMultiSelect}/>'>
+        <MultiSelect
+          deleteTag={deleteTag}
+          addTag={addTag}
+          itemsList={dataSelect}
+          activeItem={activesMultiSelect} />
+      </NewComponent>
+
+      <NewComponent
+        id={newId++}
+        textPhagraph="Multi Select Search:"
+        mpdePhagraph="body"
+        textCode='<MultiSelect
+        onClick={(id) => addTag(id)}
+        itemsList={dataSelect}
+        activeItem={activesMultiSelect}/>'>
+        <MultiSelect
+          deleteTag={deleteTag}
+          addTag={addTag}
+          itemsList={dataSelect}
+          activeItem={activesMultiSelect} />
+      </NewComponent>
+
     </div>
   );
 };
