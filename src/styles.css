@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   background: #fff;
   padding: 0;
@@ -31,6 +34,9 @@ h4 {
   font-size: 15px;
   font-family: "Proba Pro Medium" ,sans-serif;
   margin-bottom: 8px;
+}
+::placeholder {
+  color: #D0C9D6;
 }
 
 .shadow-box {

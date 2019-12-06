@@ -4,7 +4,7 @@ import './Frame.sass';
 
 const Frame = (props) => {
   return (
-    <div className="frame shadow-box">
+    <div className="frame">
       {props.children}
     </div>
   );
