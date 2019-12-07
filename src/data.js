@@ -8,7 +8,7 @@ const data = [
         id: 1,
       },
       {
-        name: "Paragraph",
+        name: "Phagraph",
         id: 2,
       }
     ]
@@ -32,26 +32,12 @@ const data = [
     id: 3,
     items: [
       {
-        name: "Checkbox",
-        id: 1,
-      },
-      {
-        name: "CheckboxGroup",
-        id: 2,
-      },
-      {
         name: "Input",
-        id: 3,
-      }
-    ]
-  },
-  {
-    name: "Карточки",
-    id: 4,
-    items: [
-      {
-        name: "Card",
         id: 1,
+      },
+      {
+        name: "Dropdown",
+        id: 2,
       },
     ]
   },

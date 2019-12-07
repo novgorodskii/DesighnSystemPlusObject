@@ -5,14 +5,13 @@ import Heading from './Heading';
 import Phagraph from './Phagraph';
 import Code from '../Code';
 import TitleUi from '../TitleUi';
-
 import "./Typography.sass";
-
 
 const Typography = () => {
   return(
     <div className="typography">
 
+      <div id="Heading"></div>
       <TitleUi path="src/components/Typography/Heading/Heading.js" name="Heading" />
 
       <Phagraph text="Heading level 1:" mode="body" />
@@ -39,6 +38,7 @@ const Typography = () => {
       </Frame>
       <Code text='<Heading text="+Object is a Company that works with glass." level={4} />' />
 
+      <div id="Phagraph"></div>
       <TitleUi path="src/components/Typography/Phagraph/Phagraph.js" name="Phagraph" />
 
       <Phagraph text="Body:" mode="body" />

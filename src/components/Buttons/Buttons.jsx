@@ -16,6 +16,7 @@ import './Buttons.sass';
 const Buttons = () => {
   return(
     <div className="buttons">
+      <div id="Button"></div>
       <TitleUi path="src/components/Buttons/Button/Button.js" name="Button" />
 
       <NewComponent
@@ -80,7 +81,7 @@ const Buttons = () => {
           onClick={() => console.log("Button Loading")}/>
       </NewComponent>
 
-
+      <div id="Link"></div>
       <TitleUi path="src/components/Buttons/Link/Link.js" name="Link" />
 
       <Phagraph text="Simple link:" mode="body" />

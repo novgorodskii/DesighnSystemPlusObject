@@ -51,6 +51,7 @@ const Forms = () => {
 
   return (
     <div className="forms">
+      <div id="Input"/>
       <TitleUi path="src/components/Forms/Input/Input.js" name="Input"/>
 
       <NewComponent
@@ -74,6 +75,7 @@ const Forms = () => {
         <Input placeholder="Placeholder" type="password" />
       </NewComponent>
 
+      <div id="Dropdown"/>
       <TitleUi path="src/components/Forms/Select/Select.js" name="Dropdown"/>
 
       <NewComponent
