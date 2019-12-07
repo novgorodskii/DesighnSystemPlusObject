@@ -4,10 +4,10 @@ import Heading from '../Typography/Heading';
 
 const ContentItem = (props) => {
   return (
-    <React.Fragment>
+    <div id={props.id}>
       <Heading text={props.name} level={1} />
       {props.children}
-    </React.Fragment>
+    </div>
   );
 };
 

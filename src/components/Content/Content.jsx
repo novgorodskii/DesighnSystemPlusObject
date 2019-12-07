@@ -5,7 +5,6 @@ import Typography from '../Typography';
 import Buttons from '../Buttons';
 import Forms from '../Forms';
 
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 import './Content.sass';
 
@@ -14,21 +13,18 @@ const Content = () => {
     <div className="content">
       <div className="name-project" >UI Kit +Object</div>
 
-      <AnchorLink href="#disnvs">
-        ddaddwqqd
-      </AnchorLink>
-      <ContentItem name="Типографика">
+      <ContentItem name="Типографика" id="Типографика">
         <Typography />
       </ContentItem>
-      <ContentItem name="Кнопки и ссылки">
+
+      <ContentItem name="Кнопки и ссылки" id="Кнопки и ссылки">
         <Buttons />
       </ContentItem>
 
-      <ContentItem name="Формы">
+      <ContentItem name="Формы" id="Формы">
         <Forms />
       </ContentItem>
 
-      <div id="disnvs">adas</div>
     </div>
   );
 };

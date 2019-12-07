@@ -1,4 +1,5 @@
 import React from 'react';
+
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import './NavList.sass';
 import data from '../../data';
@@ -9,7 +10,7 @@ smoothscroll.polyfill();
 const NavListItem = ({name, arr}) => {
   return (
     <div className="nav-list-item">
-      <div className="nav-list-item-title">{name}</div>
+      <AnchorLink href={`#${name}`} className="nav-list-item-title">{name}</AnchorLink>
       {
         arr.map(item => {
           return (
@@ -27,7 +28,9 @@ const NavListItem = ({name, arr}) => {
 
 const NavList = () => {
   const list = data.map(item => {
-    return <NavListItem key={item.id}  name={item.name} arr={item.items}/>
+    return (
+      <NavListItem key={item.id} name={item.name} arr={item.items}/>
+    )
   });
   return (
     <div className="nav-list">
