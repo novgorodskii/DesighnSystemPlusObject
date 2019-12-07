@@ -114,7 +114,7 @@ const Forms = () => {
           deleteTag={deleteTag}
           addTag={addTag}
           itemsList={dataSelect}
-          activeItem={activesMultiSelect} />
+          activeItems={activesMultiSelect} />
       </NewComponent>
     </div>
   );
